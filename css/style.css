@@ -62,9 +62,9 @@ body {
   height: 3.5rem;
   display: inline-flex;
   align-items: center;
-  padding: 0 2rem;
-  border-radius: 0.25rem;
-  font: 500 1.5rem var(--body-font);
+  padding: 0 1rem;
+  border-radius: 0.35rem;
+  font: 500 1.3rem var(--body-font);
   transition: background 0.4s;
 }
 
@@ -154,12 +154,13 @@ nav ul li a {
   transition: 0.3s;
   position: relative;
 }
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: var(--base-color);
 }
 
 nav ul li a::after {
-  content: "";
+  content: '';
   width: 0%;
   height: 2px;
   background: var(--base-color);
@@ -171,7 +172,8 @@ nav ul li a::after {
   transition: width 0.3s;
 }
 
-nav ul li a:hover::after {
+nav ul li a:hover::after, 
+nav ul li a.active::after {
   width: 100%;
 }
 
@@ -294,7 +296,7 @@ nav.show div.icon-error {
   width: 100%;
   background: var(--base-color-second);
   position: absolute;
-  top: -8.3%;
+  top: -8.5%;
   left: -33%;
   z-index: 0;
 }
@@ -305,7 +307,7 @@ nav.show div.icon-error {
 
 #about .image img,
 #about .image::before {
-  border-radius: 0.25rem;
+  border-radius: 0.35rem;
 }
 
 #about .text {
@@ -482,6 +484,13 @@ footer .social a:hover {
   .section {
     padding: 10rem 0;
   }
+  .section header,
+  #testimonials header{
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .button {
     height: 3.2rem;
   }
@@ -499,6 +508,11 @@ footer .social a:hover {
 
   nav .menu ul li a.title {
     font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
   }
 
   nav .icon-list {
@@ -527,6 +541,42 @@ footer .social a:hover {
   #about .container {
     margin: 0 auto;
     grid-auto-flow: column;
+  }
+  /*products*/
+  .cards {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  /*testimonials*/
+  #testimonials .container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*contact*/
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+  #contact .text {
+    max-width: 25rem;
+
+  }
+  /*footer*/
+  footer .section {
+    padding: 3.75rem 0;
+
+  }
+  footer .container{
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .logo {
+    font-size: 2.25rem;
   }
 }
 /* large devices: 1023 > */
