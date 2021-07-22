@@ -91,7 +91,7 @@ body {
   gap: 2rem;
 }
 .section {
-  padding: calc(5rem + var(--header--height)) 0;
+  padding: calc(5rem + var(--reader-height)) 0;
 }
 .section .title {
   margin-bottom: 1rem;
@@ -141,7 +141,7 @@ body {
 
 /* --------NAVIGATION -------------------------------------------------------*/
 nav {
-  height: var(--header-height);
+  height: var(--reader-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -520,7 +520,7 @@ footer .social a:hover {
   }
   /* Layout*/
   main {
-    margin-top: var(--header-height);
+    margin-top: var(--reader-height);
   }
   /* home */
   #home .container {
