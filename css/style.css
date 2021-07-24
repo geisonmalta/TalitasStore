@@ -62,8 +62,8 @@ body {
   height: 3.5rem;
   display: inline-flex;
   align-items: center;
-  padding: 0 1rem;
-  border-radius: 0.35rem;
+  padding: 0 2rem;
+  border-radius: 0.45rem;
   font: 500 1.3rem var(--body-font);
   transition: background 0.4s;
 }
@@ -326,11 +326,12 @@ nav.show div.icon-error {
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
 }
-.card i {
+.card blockquote {
   display: block;
   margin-bottom: 1.5rem;
   font-size: 5rem;
   color: var(--base-color);
+  
 }
 .card .title {
   font-size: 1.5rem;
