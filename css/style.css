@@ -318,6 +318,7 @@ nav.show div.icon-error {
 /* Product --------------------------------------------------------------------------------------------*/
 .cards.grid {
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 .card {
   padding: 3.625rem 2rem;
